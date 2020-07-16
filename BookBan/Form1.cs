@@ -112,5 +112,31 @@ namespace BookBan
         {
 
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            int numOfRows = this.dtGridOrder.Rows.Count - 1;
+            double totalPrice = 0;
+            for(int i = 0; i < numOfRows; i++)
+            {
+                DataGridViewRow dr = this.dtGridOrder.Rows[i];
+                totalPrice += double.Parse(dr.Cells[3].Value.ToString());
+            }
+
+            totalPrice *= 1 - (double)this.discountNumericUpDown.Value;
+
+            this.txtTotalPrice.Text = totalPrice.ToString();
+        }
+
+        private void btnTable1_Click(object sender, EventArgs e)
+        {
+            Button btnTable = sender as Button;
+            btnTable.BackColor = Color.LightBlue;
+        }
     }
 }
