@@ -256,12 +256,14 @@
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button15.ForeColor = System.Drawing.Color.OrangeRed;
             this.button15.Location = new System.Drawing.Point(165, 139);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(75, 62);
             this.button15.TabIndex = 14;
             this.button15.Text = "button1\r\nABC\r\n";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
             // 
             // button16
             // 
