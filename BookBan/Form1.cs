@@ -18,7 +18,6 @@ namespace BookBan
         private String _dish = "";
         private long _count = 0;
 
-        private DataTable dtSrc;
 
         public Form1()
         {
@@ -137,6 +136,27 @@ namespace BookBan
         {
             Button btnTable = sender as Button;
             btnTable.BackColor = Color.LightBlue;
+        }
+
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddTableForm newForm = new AddTableForm(this);
+            newForm.Show();
+            this.Enabled = false;
+        }
+
+        public void createNewTable(string text)
+        {
+            MyButton newBtn = new MyButton(this.panel1, text);
+            this.panel1.Controls.Add(newBtn);
         }
     }
 }
