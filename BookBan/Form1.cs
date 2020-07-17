@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,17 @@ namespace BookBan
         {
             InitializeComponent();
             Init();
-            
+
+            MySqlConnection mySqlConnection = DBAccess.GetConnection("db.wygo.eu", 3306, "wygo.club", "web101010", "web101010");
+
+            try
+            {
+                mySqlConnection.Open();
+                MessageBox.Show("Ho La");
+            } catch (Exception e)
+            {
+                MessageBox.Show(e.StackTrace);
+            }
         }
         
         private void Init()
