@@ -13,10 +13,12 @@ namespace BookBan
     public partial class AddTableForm : Form
     {
         private Form1 formContainer;
-        public AddTableForm(Form1 form)
+        private Control currentTab;
+        public AddTableForm(Form1 form, Control currentTab)
         {
             InitializeComponent();
-            formContainer = form;
+            this.formContainer = form;
+            this.currentTab = currentTab;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace BookBan
             }
             else
             {
-                formContainer.createNewTable(tableName);
+                formContainer.createNewTable(this.currentTab, tableName);
                 formContainer.Enabled = true;
                 this.Close();
             }
