@@ -31,7 +31,6 @@ namespace BookBan
         /// </summary>
         private void InitializeComponent()
         {
-            this.arrBtnTable = new ArrayList();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,8 +60,11 @@ namespace BookBan
             this.priceDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAddTableF1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAddTableF2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -73,7 +75,9 @@ namespace BookBan
             this.tbLayout4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridOrder)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -85,7 +89,7 @@ namespace BookBan
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.tbLayout2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -412,30 +416,63 @@ namespace BookBan
             this.totalMoney.Name = "totalMoney";
             this.totalMoney.ReadOnly = true;
             // 
-            // panel1
+            // tabControl1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 30);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 544);
-            this.panel1.TabIndex = 3;
-            MyButton btnTable1 = new MyButton(this.panel1, "Table 1");
-            this.panel1.Controls.Add(btnTable1);
-           
-            arrBtnTable.Add(btnTable1);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(3, 30);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(490, 544);
+            this.tabControl1.TabIndex = 3;
             // 
-            // button1
+            // tabPage1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(444, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 35);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tabPage1.Controls.Add(this.btnAddTableF1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(482, 518);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTableF1
+            // 
+            this.btnAddTableF1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddTableF1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddTableF1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTableF1.Location = new System.Drawing.Point(439, 0);
+            this.btnAddTableF1.Name = "btnAddTableF1";
+            this.btnAddTableF1.Size = new System.Drawing.Size(43, 35);
+            this.btnAddTableF1.TabIndex = 3;
+            this.btnAddTableF1.Text = "+";
+            this.btnAddTableF1.UseVisualStyleBackColor = true;
+            this.btnAddTableF1.Click += new System.EventHandler(this.btnAddTableF1_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnAddTableF2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(482, 518);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTableF2
+            // 
+            this.btnAddTableF2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddTableF2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTableF2.Location = new System.Drawing.Point(439, 0);
+            this.btnAddTableF2.Name = "btnAddTableF2";
+            this.btnAddTableF2.Size = new System.Drawing.Size(43, 35);
+            this.btnAddTableF2.TabIndex = 4;
+            this.btnAddTableF2.Text = "+";
+            this.btnAddTableF2.UseVisualStyleBackColor = true;
+            this.btnAddTableF2.Click += new System.EventHandler(this.btnAddTableF2_Click);
             // 
             // Form1
             // 
@@ -458,11 +495,12 @@ namespace BookBan
             this.tbLayout4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridOrder)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
-
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -494,9 +532,14 @@ namespace BookBan
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDish;
         private System.Windows.Forms.DataGridViewTextBoxColumn countDish;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalMoney;
-        private System.Windows.Forms.Panel panel1;
-        private Button button1;
         private ArrayList arrBtnTable;
+        private ArrayList arrFloors;
+        private MyButton btnTable1;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private Button btnAddTableF1;
+        private Button btnAddTableF2;
     }
 }
 
