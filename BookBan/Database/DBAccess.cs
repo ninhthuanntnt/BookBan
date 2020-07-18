@@ -11,7 +11,11 @@ namespace BookBan
 {
     class DBAccess
     {
-        public static MySqlConnection GetConnection(string host, int port, string database, string username, string password)
+        public static MySqlConnection GetConnection(string host= "db.wygo.eu", 
+                                                            int port=3306, 
+                                                            string database="BookBan", 
+                                                            string username="web101010", 
+                                                            string password="web101010")
         {
             String connString = "Server=" + host + 
                 ";Database=" + database + 

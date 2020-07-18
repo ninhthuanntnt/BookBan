@@ -38,6 +38,9 @@
     <Reference Include="MySql.Data.EntityFramework, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,10 +58,13 @@
     <Compile Include="AddTableForm.Designer.cs">
       <DependentUpon>AddTableForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBAccess.cs" />
+    <Compile Include="DAO\FoodDAO.cs" />
+    <Compile Include="Database\DBAccess.cs" />
     <Compile Include="AddTableButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Database\MySqlDatabase.cs" />
+    <Compile Include="Models\FoodModel.cs" />
     <Compile Include="TabFloor.cs">
       <SubType>Component</SubType>
     </Compile>
