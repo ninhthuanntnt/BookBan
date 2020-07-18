@@ -27,14 +27,8 @@ namespace BookBan
 
             MySqlConnection mySqlConnection = DBAccess.GetConnection("db.wygo.eu", 3306, "wygo.club", "web101010", "web101010");
 
-            try
-            {
-                mySqlConnection.Open();
-                MessageBox.Show("Ho La");
-            } catch (Exception e)
-            {
-                MessageBox.Show(e.StackTrace);
-            }
+            // Thu truy van du lieu
+            DBAccess.selectQuery(mySqlConnection, "UPDATE TA_MAT_MATERIAL SET T_Code_01=1 WHERE I_ID=2");
         }
         
         private void Init()

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +24,26 @@ namespace BookBan
             return conn;
         }
 
+        public static DataSet selectQuery(MySqlConnection connection, string sqlQuery)
+        {
+            try
+            {
+                connection.Open();
+
+                DataAdapter dataAdapter = new MySqlDataAdapter(sqlQuery, connection);
+
+                DataSet dataSet = new DataSet();
+
+                dataAdapter.Fill(dataSet);
+
+                connection.Close();
+
+                return dataSet;
+            } catch(Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return null;
+            }
+        }
     }
 }
