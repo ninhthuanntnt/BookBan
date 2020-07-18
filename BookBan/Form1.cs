@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,11 @@ namespace BookBan
         {
             InitializeComponent();
             Init();
-            
+
+            MySqlConnection mySqlConnection = DBAccess.GetConnection("db.wygo.eu", 3306, "wygo.club", "web101010", "web101010");
+
+            // Thu truy van du lieu
+            DBAccess.selectQuery(mySqlConnection, "UPDATE TA_MAT_MATERIAL SET T_Code_01=1 WHERE I_ID=2");
         }
         
         private void Init()
