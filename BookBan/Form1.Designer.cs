@@ -60,11 +60,8 @@ namespace BookBan
             this.priceDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnAddTableF1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnAddTableF2 = new System.Windows.Forms.Button();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabAdd = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -75,9 +72,7 @@ namespace BookBan
             this.tbLayout4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridOrder)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -89,7 +84,7 @@ namespace BookBan
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.tbLayout2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tabControl, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -416,63 +411,36 @@ namespace BookBan
             this.totalMoney.Name = "totalMoney";
             this.totalMoney.ReadOnly = true;
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 30);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(490, 544);
-            this.tabControl1.TabIndex = 3;
+            this.tabControl.Controls.Add(this.tabFloor);
+            this.tabControl.Controls.Add(this.tabAdd);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(3, 30);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(490, 544);
+            this.tabControl.TabIndex = 3;
             // 
-            // tabPage1
+            // tabFloor
             // 
-            this.tabPage1.Controls.Add(this.btnAddTableF1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(482, 518);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabFloor.Location = new System.Drawing.Point(4, 22);
+            this.tabFloor.Name = "tabFloor";
+            this.tabFloor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFloor.Size = new System.Drawing.Size(482, 518);
+            this.tabFloor.TabIndex = 0;
+            this.tabFloor.Text = "Tầng trệt";
+            this.tabFloor.UseVisualStyleBackColor = true;
             // 
-            // btnAddTableF1
+            // tabAdd
             // 
-            this.btnAddTableF1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddTableF1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddTableF1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTableF1.Location = new System.Drawing.Point(439, 0);
-            this.btnAddTableF1.Name = "btnAddTableF1";
-            this.btnAddTableF1.Size = new System.Drawing.Size(43, 35);
-            this.btnAddTableF1.TabIndex = 3;
-            this.btnAddTableF1.Text = "+";
-            this.btnAddTableF1.UseVisualStyleBackColor = true;
-            this.btnAddTableF1.Click += new System.EventHandler(this.btnAddTableF1_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btnAddTableF2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(482, 518);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnAddTableF2
-            // 
-            this.btnAddTableF2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddTableF2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTableF2.Location = new System.Drawing.Point(439, 0);
-            this.btnAddTableF2.Name = "btnAddTableF2";
-            this.btnAddTableF2.Size = new System.Drawing.Size(43, 35);
-            this.btnAddTableF2.TabIndex = 4;
-            this.btnAddTableF2.Text = "+";
-            this.btnAddTableF2.UseVisualStyleBackColor = true;
-            this.btnAddTableF2.Click += new System.EventHandler(this.btnAddTableF2_Click);
+            this.tabAdd.Location = new System.Drawing.Point(4, 22);
+            this.tabAdd.Name = "tabAdd";
+            this.tabAdd.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAdd.Size = new System.Drawing.Size(482, 518);
+            this.tabAdd.TabIndex = 1;
+            this.tabAdd.Text = "Thêm";
+            this.tabAdd.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -495,9 +463,7 @@ namespace BookBan
             this.tbLayout4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridOrder)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -534,12 +500,9 @@ namespace BookBan
         private System.Windows.Forms.DataGridViewTextBoxColumn totalMoney;
         private ArrayList arrBtnTable;
         private ArrayList arrFloors;
-        private MyButton btnTable1;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private Button btnAddTableF1;
-        private Button btnAddTableF2;
+        private TabControl tabControl;
+        private TabFloor tabFloor;
+        private TabPage tabAdd;
     }
 }
 

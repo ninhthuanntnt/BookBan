@@ -145,32 +145,11 @@ namespace BookBan
 
             }
         }
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    //AddTableForm newForm = new AddTableForm(this);
-        //    newForm.Show();
-        //    this.Enabled = false;
-        //}
-
+         
         public void createNewTable(Control container,string text)
         {
             MyButton newBtn = new MyButton(container, text);
             container.Controls.Add(newBtn);
-        }
-
-        private void btnAddTableF1_Click(object sender, EventArgs e)
-        {
-            AddTableForm newForm = new AddTableForm(this, this.tabPage1);
-            newForm.Show();
-            this.Enabled = false;
-        }
-
-        private void btnAddTableF2_Click(object sender, EventArgs e)
-        {
-            AddTableForm newForm = new AddTableForm(this, this.tabPage2);
-            newForm.Show();
-            this.Enabled = false;
         }
     }
 }

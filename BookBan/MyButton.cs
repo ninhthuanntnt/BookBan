@@ -11,6 +11,7 @@ namespace BookBan
     class MyButton: Button
     {
         private Point flagLocation;
+        private Point rootPosCursor;
         private Control container;
         private int maxX, maxY, minX, minY;
         public MyButton(Control container, string text)
@@ -25,6 +26,7 @@ namespace BookBan
             this.minY = 0;
         }
 
+
         protected override void OnMouseDown(MouseEventArgs mevent)
         {
             base.OnMouseDown(mevent);
@@ -33,13 +35,15 @@ namespace BookBan
             {
                 
                 flagLocation = mevent.Location;
+                rootPosCursor = Cursor.Position;
             }
-            
+
+            Console.WriteLine(flagLocation.X);
+
         }
 
         protected override void OnMouseLeave(EventArgs e)
         {
-
             //base.OnMouseLeave(e);
             //isDown = true;
         }
@@ -61,10 +65,25 @@ namespace BookBan
             }
         }
 
-        protected override void OnMouseUp(MouseEventArgs mevent)
+        protected override void OnMouseUp(MouseEventArgs e)
         {
-            base.OnMouseUp(mevent);
-            
+            base.OnMouseUp(e);
+            Console.WriteLine(e.X + "-" + flagLocation.X);
+            if (Cursor.Position.X == rootPosCursor.X && Cursor.Position.Y == rootPosCursor.Y)
+            {
+                if (this.BackColor == Color.LightBlue)
+                {
+                    this.BackColor = Color.LightGray;
+                }
+                else
+                {
+                    this.BackColor = Color.LightBlue;
+                }
+            }
+            Console.WriteLine(Cursor.Position.X);
         }
+
+        
     }
+
 }

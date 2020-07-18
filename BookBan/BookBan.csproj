@@ -53,6 +53,12 @@
     <Compile Include="AddTableForm.Designer.cs">
       <DependentUpon>AddTableForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTableButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabFloor.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
