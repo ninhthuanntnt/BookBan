@@ -63,8 +63,11 @@
     <Compile Include="AddTableButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Database\MySqlDatabase.cs" />
+    <Compile Include="Database\SqlServerDatabase.cs" />
+    <Compile Include="Models\DishModel.cs" />
     <Compile Include="Models\FoodModel.cs" />
+    <Compile Include="Models\TableDishModel.cs" />
+    <Compile Include="Models\TableModel.cs" />
     <Compile Include="TabFloor.cs">
       <SubType>Component</SubType>
     </Compile>
