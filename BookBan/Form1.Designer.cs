@@ -61,6 +61,7 @@ namespace BookBan
             this.countDish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabFloor = new TabFloor("Tang 1");
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -431,6 +432,8 @@ namespace BookBan
             this.tabFloor.TabIndex = 0;
             this.tabFloor.Text = "Tầng trệt";
             this.tabFloor.UseVisualStyleBackColor = true;
+
+
             // 
             // tabAdd
             // 
