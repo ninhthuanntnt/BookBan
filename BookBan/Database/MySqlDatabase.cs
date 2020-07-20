@@ -10,11 +10,12 @@ using MySql.Data.MySqlClient;
 
 namespace BookBan.Database
 {
-    [Database(Name = "BookBan")]
+    [Database]
     class MySqlDatabase : DataContext
     {
         public Table<FoodModel> foods;
-        private const string connString = "Data Source=dv.wygo.club; Initial Catalog=BookBan; User Id=web101010; Password=web101010;";
+
+        private const string connString = "Server=db.wygo.club; Database=BookBan; User Id=web101010; Password=web101010;";
         public MySqlDatabase() : base(connString) { }
     }
 }

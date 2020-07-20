@@ -28,8 +28,8 @@ namespace BookBan
 
 
             // Thu truy van du lieu
-            FoodDAO foodDAO = new FoodDAO();
-            foodDAO.getById(1);
+            FoodDAO fooddao = new FoodDAO();
+            fooddao.getById(1);
         }
         
         private void Init()
