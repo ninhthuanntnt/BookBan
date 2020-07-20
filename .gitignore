@@ -13,6 +13,7 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+BookBan/Const/MyConst.cs
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

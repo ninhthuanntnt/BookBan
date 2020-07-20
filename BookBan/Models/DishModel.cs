@@ -1,7 +1,6 @@
 ﻿using BookBan.Const;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Linq;
@@ -10,32 +9,34 @@ using System.Threading.Tasks;
 
 namespace BookBan.Models
 {
-    [Table(Name = "TA_FOOD")]
-    class FoodModel
+    [Table(Name = "TA_DISH")]
+    class DishModel
     {
         [Column(IsPrimaryKey = true, IsDbGenerated = true, Name = "I_ID")]
         public int Id { get; set; }
-
+        
         [Column(Name = "T_NAME")]
         public string Name { get; set; }
 
-        private EntitySet<DishModel> _dishes = new EntitySet<DishModel>();
+        [Column(Name = "I_PRICE")]
+        public int Price { get; set; }
 
-        [Association(Name = MyConst.FK_DISH_TO_FOOD, Storage = "_dishes", OtherKey = "FoodId")]
-        public EntitySet<DishModel> Dishes
+        [Column(Name = "I_FOOD")]
+        public int? FoodId { get; set; }
+
+        private EntityRef<FoodModel> _food = new EntityRef<FoodModel>();
+
+        [Association(Name = MyConst.FK_DISH_TO_FOOD, Storage = "_food", ThisKey = "FoodId", IsForeignKey = true)]
+        public FoodModel Food
         {
             get
             {
-                return this._dishes;
+                return this._food.Entity;
             }
             set
             {
-                this._dishes.Assign(value);
+                this._food.Entity = value;
             }
-        }
-        public FoodModel()
-        {
-
         }
     }
 }

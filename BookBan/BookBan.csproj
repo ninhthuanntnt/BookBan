@@ -40,8 +40,6 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="Devart.Data.MySql, Version=8.17.1686.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.MySql.Vs, Version=8.17.1686.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -60,7 +58,6 @@
     <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data.EntityFramework, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
@@ -112,13 +109,18 @@
     <Compile Include="AddTableForm.Designer.cs">
       <DependentUpon>AddTableForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Const\MyConst.cs" />
+    <Compile Include="Const\TemplateMyConst.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="Database\DBAccess.cs" />
     <Compile Include="AddTableButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Database\MySqlDatabase.cs" />
+    <Compile Include="Database\SqlServerDatabase.cs" />
+    <Compile Include="Models\DishModel.cs" />
     <Compile Include="Models\FoodModel.cs" />
+    <Compile Include="Models\TableDishModel.cs" />
+    <Compile Include="Models\TableModel.cs" />
     <Compile Include="TabFloor.cs">
       <SubType>Component</SubType>
     </Compile>
